@@ -7,6 +7,9 @@ from fbprophet import Prophet
 from fbprophet.plot import plot_plotly, plot_components_plotly
 from plotly import graph_objs as go
 
+
+
+
 # initial and end date
 I_DATE = '2017-01-01'
 E_DATE = date.today().strftime('%Y-%m-%d')
@@ -36,11 +39,13 @@ df_stock = df[df['snome'] == chosen_stock_name]
 chosen_stock = df_stock.iloc[0]['sigla_acao']
 # chosen_stock = chosen_stock + '.SA'
 
+
 @st.cache_data
 def get_values_online(chosen_stock_name):
     df = yf.download(chosen_stock_name, I_DATE, E_DATE)
     df.reset_index(inplace=True)
     return df
+
 
 df_values = get_values_online(chosen_stock)
 st.subheader('Prices Table -' + chosen_stock_name)
@@ -74,10 +79,11 @@ model = Prophet()
 model.fit(df_train)
 
 future = model.make_future_dataframe(periods=n_days, freq='B')
-forecast = model.predict(future)
 
+forecast = model.predict(future)
 st.subheader('Forecast')
 st.write(forecast[['ds', 'yhat', 'yhat_lower', 'yhat_upper']].tail(n_days))
+
 
 # graph
 graph1 = plot_plotly(model, forecast)
