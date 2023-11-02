@@ -25,7 +25,7 @@ n_days = st.slider('Number of forecasting days', 365, 1095)
 
 # stocks id's
 def stocks_data_collect():
-    path = 'C:/Users/AndreRefosco/app-acoes/acoes.csv'
+    path = 'acoes.csv'
     return pd.read_csv(path, delimiter=';')
 
 
