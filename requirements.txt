@@ -4,6 +4,6 @@ plotly==5.9.0
 streamlit==1.28
 yfinance==0.2.31
 holidays==0.24
-pystan
+pystan==2.19.1.1
 ephem
 numpy
