@@ -6,4 +6,4 @@ yfinance==0.2.31
 holidays==0.24
 pystan==2.19.1.1
 ephem
-numpy
+numpy<1.20
