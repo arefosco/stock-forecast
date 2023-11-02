@@ -3,4 +3,4 @@
 
 Developed using Python, Streamlit and FB Prophet.
 
-[LINK FOR THE APP]("https://stock-forecast-o6jogah78hoaglkqedvknl.streamlit.app/")
+[LINK FOR THE APP](https://stock-forecast-o6jogah78hoaglkqedvknl.streamlit.app/)
