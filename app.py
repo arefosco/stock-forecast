@@ -17,7 +17,7 @@ st.title('Stocks Analysis')
 
 st.sidebar.header('Chose the stock')
 
-n_days = st.slider('Number of forecasting days', 30, 365)
+n_days = st.slider('Number of forecasting days', 365, 1095)
 
 
 # stocks id's
